@@ -1,0 +1,3 @@
+/Users/thiagofraga/CLionProjects/estruturas/cmake-build-debug/CMakeFiles/estruturas.dir
+/Users/thiagofraga/CLionProjects/estruturas/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/thiagofraga/CLionProjects/estruturas/cmake-build-debug/CMakeFiles/rebuild_cache.dir
