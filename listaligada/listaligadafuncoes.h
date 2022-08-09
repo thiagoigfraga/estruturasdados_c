@@ -78,8 +78,50 @@ bool inserirElemListaOrd(LISTA *l, REGISTRO reg){
     int i = l->inicio;
     TIPOCHAVE ch = reg.chave;
 
-    while((i))
+    while((i != INVALIDO) && (l->A[i].reg.chave < ch)){
+        ant = i;
+        i= l->A[i].prox;
+    }
+    if(i != INVALIDO && l->A[i].reg.chave == ch) return false;
 
+    i = obterNo(l);
+    l->A[i].reg = reg;
+
+    if(ant == INVALIDO){
+        l->A[i].prox = l->inicio;
+        l->inicio = i;
+    }else{
+        l->A[i].prox = l->A[ant].prox;
+        l->A[ant].prox = i;
+    }
+
+    return true;
 }
+
+void devolverNo(LISTA *l, int j){
+    l->A[j].prox = l->dispo;
+    l->dispo = j;
+}
+
+bool excluirElemLista(LISTA *l, TIPOCHAVE ch){
+    int ant = INVALIDO;
+    int i = l->inicio;
+
+    while((i != INVALIDO) && (l->A[i].reg.chave < ch)){
+        ant = i;
+        i = l->A[i].prox;
+    }
+
+    if(i != INVALIDO || l->A[i].reg.chave != ch) return false;
+    if( i == INVALIDO) l->inicio = l->A[i].prox;
+    else l->A[ant].prox = l->A[i].prox;
+    devolverNo(l,i);
+    return true;
+}
+
+void reinicializarLista(LISTA *l){
+    inicializarLista(l);
+}
+
 
 #endif //ESTRUTURAS_LISTALIGADAFUNCOES_H
