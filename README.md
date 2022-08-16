@@ -9,3 +9,4 @@ Alguns códigos de estruturas de dados feitos em linguagens C, com o intuito de 
 ✅ Lista Sequencial  
 ✅ Lista Ligada/Encadeada Estática  
 ✅ Lista Ligada/Encadeada Dinâmica  
+✅ Lista Ligada Circular  
