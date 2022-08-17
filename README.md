@@ -13,4 +13,5 @@ Alguns códigos de estruturas de dados feitos em linguagens C, com o intuito de 
 ✅ Pilha Estática  
 ✅ Pilha Dinâmica  
 ✅ Deque  
-✅ Fila Estática
+✅ Fila Estática  
+✅ Fila Dinâmica

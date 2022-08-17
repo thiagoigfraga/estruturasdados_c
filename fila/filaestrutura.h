@@ -22,6 +22,4 @@ typedef struct{
     int nroElem;
 }FILA;
 
-
-
 #endif //ESTRUTURAS_FILAESTRUTURA_H
